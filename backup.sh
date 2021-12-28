@@ -42,7 +42,7 @@ LINK :
 $link
 
 Terima Kasih
-M AFDHAN-NEZAVPN@2021" | mail -s "Backup Data" $email
+DP VPN@2021" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 echo "Berhasil"
