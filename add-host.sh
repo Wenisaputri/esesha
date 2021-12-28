@@ -70,7 +70,7 @@ cat <<EOF > /etc/trojan-go/config.json
   },
   "websocket": {
     "enabled": true,
-    "path": "/DhanZaa",
+    "path": "/Dpvpn",
     "host": "$host"
   },
   "shadowsocks": {
@@ -157,4 +157,4 @@ END
  systemctl daemon-reload
  systemctl restart nginx
 echo "Berhasil Menambahkan Domain VPS" | lolcat
-figlet -f slant AFDHAN - NEZA | lolcat
+figlet -f slant DP VPN| lolcat
