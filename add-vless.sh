@@ -16,7 +16,7 @@ CITY=$(curl -s ipinfo.io/city )
 COUNTRY=$(curl -s ipinfo.io/country )
 
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://afdhan.github.io/sce/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Wenisaputri/sce/main/izin| grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -63,8 +63,8 @@ sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vless.json
 sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
-vlesslink1="vless://${uuid}@${domain}:$tls?path=/DhanZaa&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@${domain}:$none?path=/DhanZaa&encryption=none&type=ws#${user}"
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/Dpvpn&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:$none?path=/Dpvpn&encryption=none&type=ws#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
@@ -82,7 +82,7 @@ echo -e " Port NON-TLS   : $none"
 echo -e " ID             : ${uuid}"
 echo -e " Encryption     : none"
 echo -e " Network        : ws"
-echo -e " Path           : /DhanZaa"
+echo -e " Path           : /Dpvpn"
 echo -e "${red}=================================${off}"
 echo -e "${blue}~> VLESS TLS${off}"
 echo -e ""
@@ -96,5 +96,5 @@ echo -e " Aktif Selama   : $masaaktif Hari"
 echo -e " Dibuat Pada    : $tnggl"
 echo -e " Berakhir Pada  : $expe"
 echo -e "${red}=================================${off}"
-echo -e " ${blue}- Mod By Dhansss X NezaVPN${off}"
+echo -e " ${blue}- Mod By DP VPN${off}"
 echo -e ""
